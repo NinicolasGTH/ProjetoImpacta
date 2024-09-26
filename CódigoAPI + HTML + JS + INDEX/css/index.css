@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, ul, li, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.navbar{
+    display: flex;
+    flex-flow: row wrap;
+    height: 70px;
+    background-color: #09434b;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    flex: 20%;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: 4px;
+    border: 1px solid white;
+    margin-left: 230%;
+}
+
+.logoN{
+    flex:6%;
+    text-align: right;
+}
+.logoN h1{
+    color: #fff;
+    font-family:'Times New Roman', Times, serif
+}
+.menu{
+    flex:20%;
+    justify-content: center;
+    text-align: center;
+    margin-left: 10px;
+}
+.menu a{
+    margin-right: 10px;
+    color:#fff;
+    font-size: 15px;
+    padding: 20px 16px;
+}
+.menu a:hover{
+    color: #784e69;
+    border-top: 4px solid #6dc3c4;
+}
+.Log-Cad{
+    flex: 5%;
+    text-align: right;
+    padding: 2px;
+    margin-right: 10%;
+}
+#cadastro{
+    color:#fff;
+    font-size: 15px;
+    padding: 20px 16px;
+    margin-right: 5%;
+}
+#cadastro:hover{
+    color: #784e69;
+    border-top: 4px solid #6dc3c4;
+}
+#login{
+    background: #6dc3c4;
+    padding: 10px 25px;
+    color: #000000;
+    border-radius: 5px;
+}
+#login:hover{
+    border: none;
+    background: #784e69;
+}
+
+
+.header2{
+    display: flex;
+    flex-flow: row wrap;
+    height: 300px;
+    background: #09434b;
+}
+.imagem-hd{
+    height: 380px;
+    width: 380px;
+    margin-left:10%;
+    flex:49%;
+    margin-top: 2%;
+}
+.headline{
+    height: 380px;
+    margin-right: 10%;
+    flex:31%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    background: #0087a6;
+}
+.headline h2{
+    font-weight: 900px;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0%;
+    margin: 0;
+    margin-top: 0;
+    margin-left: 20%;
+}
+.headline h3{
+    font-weight: 900px;
+    font-size: 20px;
+    color: #fff;
+    padding: 0%;
+    margin: 0;
+    margin-top: 15%;
+    margin-left: 32.5%;
+}
+.headline p{
+    color: #d1cbcb;
+    text-align: left;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.contato-btn{
+    display: inline-block;
+    background:#6dc3c4;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-left: 30%;
+}
+.contato-btn:hover{
+    background: #784e69;
+}
+
+.segunda{
+    height: 450px;
+    margin-top: 8%;
+    justify-content: center;
+    text-align: center;
+}
+.segunda img{
+    margin-top: 2.5%;
+}
+.segunda h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+.segunda p{
+    margin-top: 2.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.cadastro2{
+    display: inline-block;
+    background:#6dc3c4;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 2.5%;
+}
+.cadastro2:hover{
+    background: #784e69;
+}
+
+.servicos{
+    height: 600px;
+    background-image: url(../img/clinica-imagem.png);
+    justify-content: center;
+    text-align: center;
+}
+.servicos h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+.servicos-cards{
+    display: inline-block;
+    margin-top: 2.5%;
+}
+.card{
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    margin: 1%;
+    border: 1px solid #09434b;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card-oculto{
+    display: none;
+}
+.card-frente h3{
+    color: #fff;
+}
+.card:hover{
+    background: #6dc3c4;
+    color: #fff;
+    padding: 40px;
+}
+.card:hover .card-frente{
+    display: none;
+}
+.card:hover .card-oculto{
+    display: block;
+}
+
+.depoimentos{
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.depoimentos h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+.depoimentos-cards{
+    background: #fff;
+    display: inline-block;
+    margin-top: 2.5%;
+}
+.card-depoimento{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 23%;
+    padding: 20px;
+    margin: 1%;
+    border: 1px solid #09434b;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#footer_social_media img {
+    width: 50px;
+    height: 50px;
+}
+
+#footer_content {
+    background-color: #09434b;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+footer{
+    background-color: #09434b;
+    color: black;
+    bottom: 0;
+    color: #fff;
+}

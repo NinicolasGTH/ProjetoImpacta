@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --cor-primaria:#6dc3c4;
+    --cor-secundaria:#E8F5C8;
+    --cor-tercearia:#771d32;
+    --cor-neutra: #fffafa;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-primaria);
+}
+
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+    border-radius: 15px;
+}
+
+.imgCadastro{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:15px 0 0 15px;
+}
+
+.imgCadastro img{
+    width: 29.4rem;
+    height: 29rem;
+    border-radius: 15px 0 0 15px;
+}
+
+.cadastro{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-neutra);
+    border-radius:0 15px 15px 0;
+}
+
+.cadastroHeader{
+    margin-bottom: 1.7rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botaoAcesso{
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.botaoAcesso button{
+    border: none;
+    background-color: var(--cor-tercearia);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botaoAcesso button:hover{
+    border:2px solid var(--cor-tercearia);
+    background-color: var(--cor-primaria);
+}
+
+.botaoAcesso button a{
+    color: var(--cor-neutra);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cadastroHeader h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cadastroHeader h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: var(--cor-tercearia);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+}
+
+.inputBox label{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.inputBox input{
+    cursor: pointer;
+    color: #000;
+    font-size: 0.8rem;
+}
+
+.inputBox .termos{
+    color: #771d32;
+}
+
+input[type="checkbox"]{
+    cursor: pointer;
+    
+}
+
+.termos {
+    font-size: 1rem;
+    text-decoration: none;
+    padding-left: 0.5rem;
+}
+
+.termos a {
+    color: var(--cor-tercearia); 
+    text-decoration: none;
+}
+
+.termos a:hover {
+    text-decoration: underline var(--cor-tercearia);
+}
+
+#inputTermo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.botaoCadastrar{
+    display: flex;
+    justify-content: center;
+    margin: 0.4rem;
+}
+
+.botaoCadastrar button{
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: var(--cor-tercearia);
+    color: var(--cor-neutra);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.botaoCadastrar button:hover{
+    border:2px solid var(--cor-tercearia);
+    background-color:var(--cor-primaria) ;
+}

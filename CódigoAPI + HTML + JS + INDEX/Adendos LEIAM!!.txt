@@ -1,0 +1,107 @@
+O HTML index precisa referenciar tanto a página de cadastro quanto Login. A estrutura imutável é a seguinte: 
+
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/index.css" media="screen" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                
+                <ul>
+                    <li><a href="./view/cadastro.html">Cadastro</li></a> 
+                    <li><a href="./view/login.html">Login</li></a> 
+                </ul>
+            </header>
+         
+    </body>
+</html>
+
+
+HTML cadastro também obrigatório com a seguinte estrutura: 
+
+<html>
+    <head>
+        <title>Cadastro de Usuário</title>
+        <script src="../script/cadastro.js"></script>    
+        <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />  
+        <link rel="stylesheet" type="text/css" href="../css/cadastro.css" media="screen" />        
+    </head>
+    <body>
+        <header>
+            <a href="../index.html">Página Inicial</a> <br>
+            <a href = "login.html"> Login</a>
+           
+        </header>
+        <section class="form">
+            <h1 style="text-align: center;">Faça o seu cadastro</h1>
+            <div>
+                <form>
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" name="name" placeholder="Nome completo..">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Email">
+
+                    <label for="cpf_cnpj">CPF / CNPJ</label>
+                    <input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="CPF/CNPJ">
+
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Senha">
+
+                    <label for="birthday">Data de nascimento</label>
+                    <input type="date" id="birthday" name="birthday">
+
+                    <label for="terms">Aceitar termos</label>
+                    <input type="checkbox" id="terms" name="terms">                    
+                    
+                    <input type="button" value="Cadastrar" onclick="cadastroUsuario()">
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
+
+O JavaScript é sujeito a alterações simples conforme o consenso do grupo; a seguir o código:
+
+
+const url = "https://go-wash-api.onrender.com/api/user"; 
+
+async function cadastroUsuario() {
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let cpf_cnpj = document.getElementById('cpf_cnpj').value;
+    let terms = document.getElementById('terms').checked;
+
+    let api = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify({
+            "name": name,
+            "email": email,
+            "user_type_id": 1,
+            "password": "123456", 
+            "cpf_cnpj": cpf_cnpj,
+            "terms": terms,
+            "birthday": "2000-10-12" 
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    if (api.ok) {
+        let resposta = await api.json();
+        console.log(resposta);
+        console.log("Cadastro realizado com sucesso!");
+        alert("Cadastro realizado com sucesso! Enviamos um link de verificação no seu email");
+    } else {
+        let respostaErro = await api.json();
+        
+        if (respostaErro.data && respostaErro.data.errors) {
+            console.log(respostaErro.data.errors.cpf_cnpj, respostaErro.data.errors.email);
+        }
+        alert("Erro, tente novamente");
+    }
+    }
+
